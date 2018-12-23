@@ -5,7 +5,7 @@ const colorMapping = {}
 
 module.exports = function (num, states, defaultColor) {
   if (!states > 0) {
-    throw new Error('Pass positive number of states or use \'num2color/map\' for `0 < numbers < 1`')
+    throw new Error('Pass positive number of states or use \'number-to-color/map\' for `0 < numbers < 1`')
   } else if (!colorMapping[states]) {
     colorMapping[states] = {}
     const memoized = colorMapping[states]

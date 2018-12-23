@@ -12,7 +12,7 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, './build'),
-    publicPath: devMode ? '/' : 'num2color/',
+    publicPath: devMode ? '/' : 'number-to-color/',
     filename: 'bundle.js',
   },
   module: {
