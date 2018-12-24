@@ -18,6 +18,7 @@ function updateColors () {
     colorContainer.setAttribute('title', `${nextColor}
 ${JSON.stringify(rgbColor, null, 1)}`)
     colorContainer.setAttribute('style', `background-color: ${nextColor}`)
+    colorContainer.innerText = state
     colorsWrapper.appendChild(colorContainer)
   }
 }
