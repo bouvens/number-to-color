@@ -7,7 +7,7 @@ Small and fast library for mapping range of numbers to colors. It varies hue (wi
 import getColor from 'number-to-color'
 // getColor(number from 0 to max - 1, max)
 const eleventhColorOfSixteen = getColor(10, 16) // equals {r: 0, g: 64, b: 255}
-// this color is 11th because of first color is 0
+// this color is 11th because of 1st color is 0
 ```
 
 ## [Demo](https://bouvens.github.io/number-to-color/)
