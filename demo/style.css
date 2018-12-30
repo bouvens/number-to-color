@@ -19,6 +19,6 @@ body {
   color: #fff;
 }
 
-#colors > div:hover {
+.color:hover {
   border-color: #fff;
 }

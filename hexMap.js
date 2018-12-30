@@ -1,6 +1,6 @@
 const map = require('./map')
 
-function convert (decimal) {
+function toHex (decimal) {
   let hex = Number(decimal).toString(16)
 
   if (hex.length < 2) {
@@ -10,8 +10,8 @@ function convert (decimal) {
   return hex
 }
 
-module.exports = function (number) {
-  const { r, g, b } = map(number)
+module.exports = function (hue) {
+  const { r, g, b } = map(hue)
 
-  return `#${convert(r)}${convert(g)}${convert(b)}`
+  return `#${toHex(r)}${toHex(g)}${toHex(b)}`
 }

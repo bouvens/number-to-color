@@ -18,10 +18,10 @@ function normalize (num) {
   return Math.round(num * 255)
 }
 
-module.exports = function (h) {
+module.exports = function (hue) {
   return {
-    r: normalize(h2rgb(h + (1 / 3))),
-    g: normalize(h2rgb(h)),
-    b: normalize(h2rgb(h - (1 / 3))),
+    r: normalize(h2rgb(hue + (1 / 3))),
+    g: normalize(h2rgb(hue)),
+    b: normalize(h2rgb(hue - (1 / 3))),
   }
 }
