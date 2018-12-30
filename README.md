@@ -6,8 +6,7 @@ Small and fast library for mapping range of numbers to colors. It varies hue (wi
 ```javascript
 import getColor from 'number-to-color'
 // getColor(number from 0 to max - 1, max)
-const eleventhColorOfSixteen = getColor(10, 16) // equals {r: 0, g: 64, b: 255}
-// this color is 11th because of 1st color is 0
+const tenthColorOfSixteen = getColor(10, 16) // equals {r: 0, g: 64, b: 255}
 ```
 
 ## [Demo](https://bouvens.github.io/number-to-color/)
@@ -30,18 +29,18 @@ Include and call it in wanted way:
 ```javascript
 // with memoization
 import getColor from 'number-to-color'
-const eleventhColorOfSixteen = getColor(10, 16) // equals {r: 0, g: 64, b: 255}
+const tenthColorOfSixteen = getColor(10, 16) // equals {r: 0, g: 64, b: 255}
 
 // without memoization for numbers [0, 1)
 import mapColor from 'number-to-color/map'
-const eleventhColorOfSixteen = mapColor(10 / 16) // equals {r: 0, g: 64, b: 255}
+const tenthColorOfSixteen = mapColor(10 / 16) // equals {r: 0, g: 64, b: 255}
 
 // in hex format for numbers [0, 1)
 import hexColor from 'number-to-color/hexMap'
-const eleventhColorOfSixteen = hexColor(10 / 16) // equals '#0040ff'
+const tenthColorOfSixteen = hexColor(10 / 16) // equals '#0040ff'
 ```
 
-`hexColor(0) === hexColor(1)`, so don't use both edges in the same time.
+`hexColor(0) === hexColor(1)`, so don't use both edges in the same time. Thus values of `getColor(0, 16)` equals `getcolor(16, 16)`.
 
 ## How to run demo locally
 
