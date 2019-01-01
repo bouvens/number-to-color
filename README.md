@@ -1,7 +1,7 @@
 # Number-to-color
 [![npm][npm-badge]][npm] [![npm][npm-dt-badge]][npm] [![GitHub issues][issues-badge]][issues]
 
-Small and fast library for mapping range of numbers to colors. It varies hue (with saturation and lightness equals to 1) and returning RGB in different formats.
+Small and fast library for mapping range of numbers to a circular palette of colors. It varies hue (with saturation and lightness equals to 1) and returning RGB in different formats.
 
 ```javascript
 import getColor from 'number-to-color'
