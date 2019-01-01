@@ -3,6 +3,10 @@ body {
   font-family: sans-serif;
 }
 
+li {
+  line-height: 1.4;
+}
+
 #colors {
   display: flex;
   flex-wrap: wrap;
