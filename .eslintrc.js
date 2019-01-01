@@ -24,5 +24,6 @@ module.exports = {
     'object-curly-newline': ['off'],
     'semi': ['warn', 'never'],
     'space-before-function-paren': ['error', 'always'],
+    'valid-jsdoc': ['error'],
   },
 }

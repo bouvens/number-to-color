@@ -1,5 +1,10 @@
 const map = require('./map')
 
+/**
+ * Decimal to two-digit hex number converter
+ * @param {number} decimal Number to convert
+ * @returns {string} Two-digit hex number
+ */
 function toHex (decimal) {
   let hex = Number(decimal).toString(16)
 
@@ -10,6 +15,15 @@ function toHex (decimal) {
   return hex
 }
 
+/**
+ * HSL to hex RGB converter with S = 1 and L = 1
+ * @param {number} hue Number between 0 and 1
+ * @returns {string} Color converted to hex RGB like #aaff00
+ *
+ * @example
+ * import hexColor from 'number-to-color/hexMap'
+ * const tenthColorOfSixteen = hexColor(10 / 16) // equals '#0040ff'
+ */
 module.exports = function (hue) {
   const { r, g, b } = map(hue)
 

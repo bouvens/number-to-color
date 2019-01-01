@@ -18,6 +18,15 @@ function normalize (num) {
   return Math.round(num * 255)
 }
 
+/**
+ * HSL to RGB converter with S = 1 and L = 1
+ * @param {number} hue Number between 0 and 1
+ * @returns {{r: *, b: *, g: *}} Color converted to RGB
+ *
+ * @example
+ * import mapColor from 'number-to-color/map'
+ * const tenthColorOfSixteen = mapColor(10 / 16) // equals {r: 0, g: 64, b: 255}
+ */
 module.exports = function (hue) {
   return {
     r: normalize(h2rgb(hue + (1 / 3))),
