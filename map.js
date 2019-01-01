@@ -2,20 +2,15 @@ function h2rgb (initT) {
   const t = initT < 0 ? initT + 1 : initT % 1
 
   if (t < 1 / 6) {
-    return 6 * t
+    return Math.round(t * 1530)
   }
   if (t < 1 / 2) {
-    return 1
+    return 255
   }
   if (t < 2 / 3) {
-    return ((2 / 3) - t) * 6
+    return Math.round(((2 / 3) - t) * 1530)
   }
-
   return 0
-}
-
-function normalize (num) {
-  return Math.round(num * 255)
 }
 
 /**
@@ -29,8 +24,8 @@ function normalize (num) {
  */
 module.exports = function (hue) {
   return {
-    r: normalize(h2rgb(hue + (1 / 3))),
-    g: normalize(h2rgb(hue)),
-    b: normalize(h2rgb(hue - (1 / 3))),
+    r: h2rgb(hue + (1 / 3)),
+    g: h2rgb(hue),
+    b: h2rgb(hue - (1 / 3)),
   }
 }
