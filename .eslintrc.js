@@ -20,6 +20,7 @@ module.exports = {
     'no-multiple-empty-lines': 'warn',
     'no-trailing-spaces': ['error', { skipBlankLines: true }],
     'no-undefined': 'error',
+    'no-unexpected-multiline': 'error',
     'no-void': 'off',
     'object-curly-newline': ['off'],
     'semi': ['warn', 'never'],
