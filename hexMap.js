@@ -1,4 +1,4 @@
-const map = require('./map')
+const mapColor = require('./map')
 
 /**
  * Decimal to two-digit hex number converter
@@ -25,7 +25,7 @@ function toHex (decimal) {
  * const tenthColorOfSixteen = hexColor(10 / 16) // equals '#0040ff'
  */
 module.exports = function (hue) {
-  const { r, g, b } = map(hue)
+  const { r, g, b } = mapColor(hue)
 
   return `#${toHex(r)}${toHex(g)}${toHex(b)}`
 }
