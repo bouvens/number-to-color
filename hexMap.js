@@ -5,15 +5,9 @@ const mapColor = require('./map')
  * @param {number} decimal Number to convert
  * @returns {string} Two-digit hex number
  */
-function toHex (decimal) {
-  let hex = Number(decimal).toString(16)
-
-  if (hex.length < 2) {
-    hex = `0${hex}`
-  }
-
-  return hex
-}
+const toHex = (decimal) => decimal
+  .toString(16)
+  .padStart(2, '0')
 
 /**
  * HSL to hex RGB converter with S = 1 and L = 1
