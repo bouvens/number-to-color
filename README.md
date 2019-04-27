@@ -1,6 +1,8 @@
 # Number-to-color
 [![npm][npm-badge]][npm] [![npm][npm-dt-badge]][npm] [![GitHub issues][issues-badge]][issues]
 
+<img src='https://raw.githubusercontent.com/bouvens/number-to-color/master/demo/colors-example.png' align="right" alt="An example of number to color conversion" width=168 height=168>
+
 Small and fast library for mapping range of numbers to a circular palette of colors. It varies hue (with saturation and lightness equals to 1) and returning RGB in different formats.
 
 ```javascript
