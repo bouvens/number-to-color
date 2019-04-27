@@ -7,6 +7,7 @@
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
     "lint": "eslint *.js",
+    "test": "node ./test/benchmark.js",
     "size": "size-limit",
     "deploy": "npm run-script build && gh-pages -d build"
   },
@@ -36,6 +37,7 @@
   },
   "homepage": "https://github.com/bouvens/number-to-color#readme",
   "devDependencies": {
+    "benchmark": "^2.1.4",
     "css-loader": "^2.0.1",
     "eslint": "^5.10.0",
     "eslint-config-airbnb": "^17.1.0",
