@@ -1,18 +1,24 @@
-const getColor = require('../hexMap')
-const getRGB = require('../map')
+const getColor = require('../')
+const hexColor = require('../hexMap')
 
 const input = document.getElementById('states')
 const colorsWrapper = document.getElementById('colors')
+let previousStates
 
 function updateColors () {
-  const states = input.value
+  const states = input.value.slice(0, 4)
+  input.value = states
+  if (states === previousStates) {
+    return
+  }
+  previousStates = states
+
   // slow but easy clear
   colorsWrapper.innerHTML = ''
 
   for (let state = 0; state <= states; state += 1) {
-    const h = state / states
-    const nextColor = getColor(h)
-    const rgbColor = getRGB(h)
+    const rgbColor = getColor(state, states)
+    const nextColor = hexColor(state / states)
     const colorContainer = document.createElement('div')
     colorContainer.setAttribute('class', 'color')
     colorContainer.setAttribute('title', `${nextColor}
