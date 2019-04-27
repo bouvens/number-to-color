@@ -1,20 +1,22 @@
-# Number-to-color
+# JavaScript number-to-color
 [![npm][npm-badge]][npm] [![npm][npm-dt-badge]][npm] [![GitHub issues][issues-badge]][issues]
 
-<img src='https://raw.githubusercontent.com/bouvens/number-to-color/master/demo/colors-example.png' align="right" alt="An example of number to color conversion" width=168 height=168>
+<img src="https://raw.githubusercontent.com/bouvens/number-to-color/master/demo/colors-example.png" align="right" alt="An example of number to color conversion" width=168 height=168>
 
 Small and fast library for mapping range of numbers to a circular palette of colors. It varies hue (with saturation and lightness equals to 1) and returning RGB in different formats.
 
 ```javascript
 import getColor from 'number-to-color'
-// getColor(number from 0 to max - 1, max)
+// getColor(number_from_0_to_max_-_1, max)
 const tenthColorOfSixteen = getColor(10, 16) // equals {r: 0, g: 64, b: 255}
 ```
 
 ## [Demo](https://bouvens.github.io/number-to-color/)
    
-You can see a live demo at [https://bouvens.github.io/number-to-color/](https://bouvens.github.io/number-to-color/)
+You can see a live demo at <img src="https://raw.githubusercontent.com/bouvens/number-to-color/master/demo/favicon.png" width=16 height=16> [https://bouvens.github.io/number-to-color/](https://bouvens.github.io/number-to-color/)
 The source code of this demo is available in [the repository](https://github.com/bouvens/number-to-color/tree/master/demo).
+
+Example of usage: <img src="https://raw.githubusercontent.com/bouvens/griffeath-machine/master/src/favicon.png" width=16 height=16> [Griffeath's machine](https://bouvens.github.io/griffeath-machine/).
 
 ## Memoization
 
@@ -44,6 +46,13 @@ const tenthColorOfSixteen = hexColor(10 / 16) // equals '#0040ff'
 
 `hexColor(0) === hexColor(1)`, so don't use both edges in the same time. Thus values of `getColor(0, 16)` equals `getcolor(16, 16)`.
 
+## Sizes
+
+With all dependencies, minified and gzipped:
+* `require('number-to-color')` 159 B
+* `require('number-to-color/map')` 87 B
+* `require('number-to-color/hexMap')` 151 B
+
 ## How to run demo locally
 
 Run in a console:
@@ -64,7 +73,7 @@ For sure you are able to use `npm` instead of `yarn`.
 * This library is inspired by [Nano ID](https://github.com/ai/nanoid#readme).
 
 [npm-badge]: https://img.shields.io/npm/v/number-to-color.png?style=flat-square
-[npm]: https://www.npmjs.org/package/number-to-color
+[npm]: https://www.npmjs.com/package/number-to-color
 
 [npm-dt-badge]: https://img.shields.io/npm/dt/number-to-color.png?style=flat-square
 
