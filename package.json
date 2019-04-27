@@ -7,9 +7,20 @@
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
     "lint": "eslint *.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "size": "size-limit",
     "deploy": "npm run-script build && gh-pages -d build"
   },
+  "size-limit": [
+    {
+      "path": "./map.js"
+    },
+    {
+      "path": "./index.js"
+    },
+    {
+      "path": "./hexMap.js"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "bouvens/number-to-color"
@@ -33,6 +44,7 @@
     "gh-pages": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.5.0",
+    "size-limit": "^1.2.0",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
