@@ -13,10 +13,10 @@
   },
   "size-limit": [
     {
-      "path": "./map.js"
+      "path": "./index.js"
     },
     {
-      "path": "./index.js"
+      "path": "./map.js"
     },
     {
       "path": "./hexMap.js"
