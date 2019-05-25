@@ -16,7 +16,7 @@ const tenthColorOfSixteen = getColor(10, 16) // equals {r: 0, g: 64, b: 255}
 You can see a live demo at <img src="https://raw.githubusercontent.com/bouvens/number-to-color/master/demo/favicon.png" width=16 height=16> [https://bouvens.github.io/number-to-color/](https://bouvens.github.io/number-to-color/)
 The source code of this demo is available in [the repository](https://github.com/bouvens/number-to-color/tree/master/demo).
 
-Example of usage: <img src="https://raw.githubusercontent.com/bouvens/griffeath-machine/master/src/favicon.png" width=16 height=16> [Griffeath's machine](https://bouvens.github.io/griffeath-machine/).
+Example of usage: <img src="https://raw.githubusercontent.com/bouvens/griffeath-machine/4e27f6f5df4c6cc77c96ab2e3545cbdc1da0a433/img/favicon.png" width=16 height=16> [Griffeath's machine](https://bouvens.github.io/griffeath-machine/).
 
 ## Memoization
 
