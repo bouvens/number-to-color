@@ -2,9 +2,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
 
-module.exports = (env, argv) => {
+module.exports = () => {
   const demoPath = path.join(__dirname, 'demo/')
-  const devMode = argv.mode !== 'production'
 
   return {
     entry: [
@@ -13,7 +12,7 @@ module.exports = (env, argv) => {
     ],
     output: {
       path: path.join(__dirname, './build'),
-      publicPath: devMode ? '/' : '/number-to-color/',
+      publicPath: '',
       filename: 'bundle.js',
     },
     module: {
