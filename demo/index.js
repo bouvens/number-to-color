@@ -34,4 +34,4 @@ function initialize () {
   updateColors()
 }
 
-document.addEventListener('DOMContentLoaded', initialize, false)
+document.addEventListener('DOMContentLoaded', initialize)
