@@ -7,7 +7,7 @@ Small and fast library for mapping range of numbers to a circular palette of col
 
 ```javascript
 import getColor from 'number-to-color'
-// getColor(number_from_0_to_max_-_1, max)
+// getColor(number from 0 to max − 1, max)
 const tenthColorOfSixteen = getColor(10, 16) // equals {r: 0, g: 64, b: 255}
 ```
 
