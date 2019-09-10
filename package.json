@@ -24,10 +24,7 @@
       "path": "./hexMap.js"
     }
   ],
-  "repository": {
-    "type": "git",
-    "url": "bouvens/number-to-color"
-  },
+  "repository": "github:bouvens/number-to-color",
   "keywords": [
     "javascript",
     "npm"
