@@ -1,6 +1,11 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.4.1 (December 31, 2019)
+* Docs improvements.
+* Dependency updates.
+* Small fixes.
+
 ## 0.4.0 (April 28, 2019)
 * Optimize `getColor`, add benchmarks.
 * Install size-limit.
