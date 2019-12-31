@@ -1,6 +1,6 @@
 {
   "name": "number-to-color",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "High performance number to bright color converter",
   "main": "index.js",
   "scripts": {
