@@ -18,7 +18,7 @@ const toHex = (decimal) => decimal
  * import hexColor from 'number-to-color/hexMap'
  * const tenthColorOfSixteen = hexColor(10 / 16) // equals '#0040ff'
  */
-module.exports = function (hue) {
+module.exports = function hexMap (hue) {
   const { r, g, b } = mapColor(hue)
 
   return `#${toHex(r)}${toHex(g)}${toHex(b)}`
