@@ -12,7 +12,7 @@ const toHex = (decimal) => decimal
 /**
  * HSL to hex RGB converter with S = 1 and L = 1
  * @param {number} hue Number between 0 and 1
- * @returns {string} Color converted to hex RGB like #aaff00
+ * @returns {string} Converted to hex RGB color like #aaff00
  *
  * @example
  * import hexColor from 'number-to-color/hexMap'
