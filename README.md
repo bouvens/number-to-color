@@ -1,9 +1,9 @@
-# JavaScript number-to-color
+# JavaScript Number to Color converter
 [![npm][npm-badge]][npm] [![npm][npm-dt-badge]][npm] [![GitHub issues][issues-badge]][issues]
 
 <img src="https://raw.githubusercontent.com/bouvens/number-to-color/master/demo/colors-example.png" align="right" alt="An example of number to color conversion" width=168 height=168>
 
-The small and fast library maps a range of numbers to a circular palette of colors. It varies hue (with saturation and lightness equals to 1) and returning RGB in different formats.
+This small and fast library maps a range of numbers to a circular palette of colors. It varies hue (with saturation and lightness equals to 1) and returning RGB in different formats.
 
 ```javascript
 import getColor from 'number-to-color'
@@ -22,7 +22,7 @@ Example of usage: <img src="https://raw.githubusercontent.com/bouvens/griffeath-
 
 The default export in the package calculates all colors for `numbers` and memoizes these values for every `max`.
 
-## Usage and formats
+## Usage and Formats
 
 Run in a console:
 ```bash
@@ -53,7 +53,7 @@ With all dependencies, minified and gzipped:
 * `require('number-to-color/map')` 87 B
 * `require('number-to-color/hexMap')` 151 B
 
-## How to run demo locally
+## How to Run the Demo Locally
 
 Run in a console:
 ```bash
