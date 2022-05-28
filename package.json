@@ -19,10 +19,10 @@
       "path": "./index.js"
     },
     {
-      "path": "./map.js"
+      "path": "./map-color.js"
     },
     {
-      "path": "./hexMap.js"
+      "path": "./rgb-to-hex.js"
     }
   ],
   "eslintConfig": {

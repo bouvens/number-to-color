@@ -1,36 +1,45 @@
-const getColor = require('..')
-const hexColor = require('../hexMap')
+const { numberToColor } = require('..')
+const { rgbToHex } = require('../rgb-to-hex')
 
-const input = document.getElementById('states')
+const HIDDEN_CLASS = 'hidden'
+
+const colorsInput = document.getElementById('colors-number')
+const shuffledInput = document.getElementById('shuffled')
 const colorsWrapper = document.getElementById('colors')
-let previousStates
+const shuffledNotice = document.getElementById('shuffled-notice')
 
-function updateColors() {
-  const states = input.value.slice(0, 4)
-  input.value = states
-  if (states === previousStates) {
-    return
-  }
-  previousStates = states
+function rerender({ colors, shuffled }) {
+  colorsWrapper.textContent = ''
 
-  // slow but easy clear
-  colorsWrapper.innerHTML = ''
-
-  for (let state = 0; state <= states; state += 1) {
-    const rgbColor = getColor(state, states)
-    const nextColor = hexColor(state / states)
+  for (let i = 0; i < colors; i++) {
+    const rgbColor = numberToColor(i, colors, shuffled)
+    const hexColor = rgbToHex(rgbColor)
     const colorContainer = document.createElement('div')
     colorContainer.setAttribute('class', 'color')
-    colorContainer.setAttribute('title', `${nextColor}
+    colorContainer.setAttribute('title', `${hexColor}
 ${JSON.stringify(rgbColor, null, 1)}`)
-    colorContainer.setAttribute('style', `background-color: ${nextColor}`)
-    colorContainer.innerText = `${state}`
+    colorContainer.setAttribute('style', `background-color: ${hexColor}`)
+    colorContainer.innerText = `${i}`
     colorsWrapper.appendChild(colorContainer)
   }
 }
 
+function parseColorsNumber(value) {
+  return Number(value.slice(0, 3)) || 9
+}
+
+function updateColors() {
+  const colors = parseColorsNumber(colorsInput.value)
+  colorsInput.value = colors
+  const shuffled = shuffledInput.checked
+  shuffledNotice.classList[shuffled ? 'remove' : 'add'](HIDDEN_CLASS)
+
+  rerender({ colors, shuffled })
+}
+
 function initialize() {
-  input.oninput = updateColors
+  colorsInput.oninput = updateColors
+  shuffledInput.onchange = updateColors
   updateColors()
 }
 
