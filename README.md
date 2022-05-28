@@ -49,9 +49,9 @@ const tenthColorOfSixteen = hexColor(10 / 16) // equals '#0040ff'
 ## Sizes
 
 With all dependencies, minified and gzipped:
-* `require('number-to-color')` 159 B
-* `require('number-to-color/map')` 87 B
-* `require('number-to-color/hexMap')` 151 B
+* `require('number-to-color')` 254 B
+* `require('number-to-color/map')` 165 B
+* `require('number-to-color/hexMap')` 242 B
 
 ## How to Run the Demo Locally
 
@@ -59,13 +59,11 @@ Run in a console:
 ```bash
 git clone git@github.com:bouvens/number-to-color.git
 cd number-to-color
-yarn
-yarn run start
+npm install
+npm run start
 ```
 
 Then open [http://localhost:8080/](http://localhost:8080/)
-
-For sure, you can use `npm` instead of `yarn`.
 
 ## References
 
