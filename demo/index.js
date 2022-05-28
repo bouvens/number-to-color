@@ -1,11 +1,11 @@
-const getColor = require('../')
+const getColor = require('..')
 const hexColor = require('../hexMap')
 
 const input = document.getElementById('states')
 const colorsWrapper = document.getElementById('colors')
 let previousStates
 
-function updateColors () {
+function updateColors() {
   const states = input.value.slice(0, 4)
   input.value = states
   if (states === previousStates) {
@@ -29,7 +29,7 @@ ${JSON.stringify(rgbColor, null, 1)}`)
   }
 }
 
-function initialize () {
+function initialize() {
   input.oninput = updateColors
   updateColors()
 }

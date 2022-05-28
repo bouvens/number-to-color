@@ -28,7 +28,7 @@ suite
   .on('cycle', (event) => {
     console.log(`${event.target}`)
   })
-  .on('complete', function () {
+  .on('complete', function handleComplete() {
     console.log(`Fastest is ${this.filter('fastest').map('name')}`)
   })
   .run()
