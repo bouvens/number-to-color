@@ -35,7 +35,7 @@
   "bugs": {
     "url": "https://github.com/bouvens/number-to-color/issues"
   },
-  "homepage": "https://github.com/bouvens/number-to-color#readme",
+  "homepage": "https://bouvens.github.io/number-to-color",
   "devDependencies": {
     "@size-limit/preset-small-lib": "^7.0.8",
     "benchmark": "^2.1.4",
