@@ -1,6 +1,6 @@
 {
   "name": "number-to-color",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "High performance number to bright color converter",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,9 @@
   "eslintConfig": {
     "extends": "air-base"
   },
-  "eslintIgnore": ["/build"],
+  "eslintIgnore": [
+    "/build"
+  ],
   "repository": "github:bouvens/number-to-color",
   "keywords": [
     "javascript",
