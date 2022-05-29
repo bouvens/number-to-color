@@ -1,14 +1,19 @@
+const oneSixth = 1 / 6
+const half = 0.5
+const twoThird = 2 / 3
+const oneThird = 1 / 3
+
 function h2rgb(initT) {
   const t = initT < 0 ? initT + 1 : initT % 1
 
-  if (t < 1 / 6) {
+  if (t < oneSixth) {
     return Math.round(t * 1530)
   }
-  if (t < 1 / 2) {
+  if (t < half) {
     return 255
   }
-  if (t < 2 / 3) {
-    return Math.round(((2 / 3) - t) * 1530)
+  if (t < twoThird) {
+    return Math.round(((twoThird) - t) * 1530)
   }
   return 0
 }
@@ -23,7 +28,7 @@ function h2rgb(initT) {
  * const tenthColorOfSixteen = mapColor(10 / 16) // equals to { r: 0, g: 64, b: 255 }
  */
 module.exports.mapColor = (hue) => ({
-  r: h2rgb(hue + (1 / 3)),
+  r: h2rgb(hue + oneThird),
   g: h2rgb(hue),
-  b: h2rgb(hue - (1 / 3)),
+  b: h2rgb(hue - oneThird),
 })

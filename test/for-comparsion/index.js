@@ -11,9 +11,12 @@ const shuffledColorMapping = []
  */
 function shuffle(array) {
   const resultArray = [...array]
-  for (let i = resultArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [resultArray[i], resultArray[j]] = [resultArray[j], resultArray[i]]
+  let i = resultArray.length
+  while (i) {
+    // eslint-disable-next-line no-plusplus
+    const j = Math.floor(Math.random() * (i--))
+    resultArray[i] = resultArray[j]
+    resultArray[j] = array[i]
   }
   return resultArray
 }
@@ -43,7 +46,7 @@ module.exports.numberToColor = (
       colorMapping[colors].push(mapColor(i / colors))
     }
     if (shuffled) {
-      colorMapping[colors] = shuffle(colorMapping[colors])
+      shuffle(colorMapping[colors])
     }
   }
 
