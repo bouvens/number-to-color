@@ -7,6 +7,15 @@ li {
   line-height: 1.4;
 }
 
+.field {
+  margin-right: 2em;
+  user-select: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
 #colors {
   display: flex;
   flex-wrap: wrap;
