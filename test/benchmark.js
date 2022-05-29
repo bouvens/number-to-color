@@ -1,34 +1,35 @@
 /* eslint-disable no-console */
 const benchmark = require('benchmark')
-const getColor = require('../index')
-const getColorNew = require('./getColor')
+const { numberToColor } = require('..')
+const { numberToColor: numberToColorNew } = require('./for-comparsion')
 
-const states = 100
+const colors = 100
 
 const repeatForAllNumbers = (func) => {
-  for (let i = 0; i < states; i += 1) {
-    func(i, states)
+  for (let i = 0; i < colors; i++) {
+    func(i, colors)
+    func(i, colors, true)
   }
 }
 const suite = new benchmark.Suite()
 
 suite
   .add('new', () => {
-    repeatForAllNumbers(getColorNew)
+    repeatForAllNumbers(numberToColorNew)
   })
   .add('old', () => {
-    repeatForAllNumbers(getColor)
+    repeatForAllNumbers(numberToColor)
   })
-  .add('repeat new', () => {
-    repeatForAllNumbers(getColorNew)
+  .add('newRepeat', () => {
+    repeatForAllNumbers(numberToColorNew)
   })
-  .add('repeat old', () => {
-    repeatForAllNumbers(getColor)
+  .add('oldRepeat', () => {
+    repeatForAllNumbers(numberToColor)
   })
   .on('cycle', (event) => {
     console.log(`${event.target}`)
   })
   .on('complete', function handleComplete() {
-    console.log(`Fastest is ${this.filter('fastest').map('name')}`)
+    console.log(`The fastest is ${this.filter('fastest').map('name')}.`)
   })
   .run()
