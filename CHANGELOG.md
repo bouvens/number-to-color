@@ -1,6 +1,14 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.0.0 (May 29, 2022)
+* BREAKING: Add shuffle argument to `numberToColor()`
+* BREAKING: Replacement of `hexMap()` with `rgbToHex()`
+* BREAKING: Named exports
+* Argument name updates
+* Docs updates
+* Demo updates
+
 ## 0.5.0 (February 18, 2021)
 * JSDoc updates
 * Docs improvements
@@ -12,7 +20,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * Small fixes
 
 ## 0.4.0 (April 28, 2019)
-* Optimize `getColor`, add benchmarks
+* Optimize `getColor()`, add benchmarks
 * Install size-limit
 * Refactor code refactored
 * Update documentation, improve the demo
