@@ -49,6 +49,7 @@
     "eslint": "^8.16.0",
     "eslint-config-air-base": "^0.3.1",
     "gh-pages": "^4.0.0",
+    "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
     "size-limit": "^7.0.8",

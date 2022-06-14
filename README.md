@@ -79,7 +79,7 @@ It's a color that corresponds to the number argument (`0 <= r, g, b <= 255`).
 
 ## Sizes
 
-With all dependencies, minified and gzipped:
+With all (0) dependencies, minified and gzipped:
 
 * `require('number-to-color')` 358 B
 * `require('number-to-color/map-color')` 172 B
